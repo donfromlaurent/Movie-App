@@ -1,0 +1,133 @@
+:root{
+	--primary_color: #074094;
+	--secondary_color: #062552;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: var(--primary_color);
+	font-family: sans-serif;
+	margin: 0;
+}
+header{
+	background-color: var(--secondary_color);
+	display: flex;
+	justify-content: space-between;
+	padding: 1.6rem;
+}
+.logo{
+	font-size: 2rem;
+	background: -webkit-linear-gradient(#374151, #94b2e0);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: bold;
+}
+.search{
+	background: transparent;
+	border: 0.2rem solid #64748b;
+	border-radius: 5rem;
+	font-family: inherit;
+	padding: 0.5rem 1rem;
+}
+.search:focus{
+	outline: none;
+	background-color: var(--primary_color);
+	color: #fff;
+}
+#main{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.movie{
+	width: 15rem;
+	margin: 1.9rem;
+	background-color: var(--secondary_color);
+	box-shadow: 0.2rem 0.2rem 3rem 0 rgba(0, 0, 0, 0.2);
+	border-radius: 0.3rem;
+	overflow: hidden;
+	position: relative;
+}
+.movie-img{
+	width: 100%;
+}
+.movie-info{
+	display: flex;
+	justify-content: space-between;
+	padding: 0.8rem;
+	letter-spacing: 0.1rem;
+	font-size: 1.6rem;
+}
+.movie-info h3{
+	color: #eee;
+	font-size: 1rem;
+}
+.movie-info span{
+	background-color: var(--primary_color);
+	padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+	border-radius: 0.5rem;
+	font-weight: bold;
+}
+.movie-info span.green{
+	color: lightgreen;
+}
+.movie-info span.red{
+	color: crimson;
+}
+.movie-info span.orange{
+	color: orange;
+}
+.overview{
+	background-color: white;
+	padding: 0.8rem 0.8rem;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	max-width: 100%;
+	transform: translateY(101%);
+	font-size: 1.8rem;
+	color: #a8a29e;
+	transition: all 0.2s ease;
+	box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.2);
+}
+.overview:hover{
+	transform: translateY(0);
+}
+@media only screen and (max-width: 700px){
+	header{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.movie{
+		width: 40%;
+		background-color: var(--secondary_color);
+		box-shadow: 0.2rem 0.2rem 3rem 0 rgba(0, 0, 0, 0.2);
+		border-radius: 0.3rem;
+		overflow: hidden;
+		position: relative;
+	}
+}
+@media only screen and (max-width: 500px){
+	header{
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+	.movie{
+		width: 100%;
+		background-color: var(--secondary_color);
+		box-shadow: 0.2rem 0.2rem 3rem 0 rgba(0, 0, 0, 0.2);
+		border-radius: 0.3rem;
+		overflow: hidden;
+		position: relative;
+	}
+}
